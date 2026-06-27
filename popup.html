@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PhishBlock Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-icon">PB</div>
+    <div class="title-area">
+      <h1>PhishBlock</h1>
+      <span>ICT Impersonation Guard</span>
+    </div>
+  </div>
+
+  <!-- Real-Time Status Card -->
+  <div id="status-card" class="dashboard-card state-safe">
+    <span id="status-badge" class="status-badge">Safe</span>
+    
+    <div class="score-display">
+      <span id="score-number" class="score-number">0</span>
+      <div class="score-label">Threat Score</div>
+    </div>
+    
+    <div id="tab-domain" class="tab-info">Retrieving URL...</div>
+  </div>
+
+  <!-- Detail Indicators List (collapsible/only visible when threat score > 0) -->
+  <div id="details-section" class="details-section">
+    <div class="details-title">Indicators Triggered</div>
+    <ul id="indicator-list" class="indicator-list">
+      <!-- Dynamic content injected by popup.js -->
+    </ul>
+  </div>
+
+  <!-- Action Button -->
+  <button id="report-btn" class="btn-report">
+    <svg viewBox="0 0 24 24">
+      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+    </svg>
+    Report to BIUST ICT
+  </button>
+
+  <!-- Official Channels reference -->
+  <div class="footer">
+    Support: <a href="https://support.biust.ac.bw/" target="_blank" id="support-link">support.biust.ac.bw</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
